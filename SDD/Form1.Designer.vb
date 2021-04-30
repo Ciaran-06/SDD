@@ -23,12 +23,12 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.cmdFillArray = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.cmdWriteFile = New System.Windows.Forms.Button()
+        Me.cmdReadFile = New System.Windows.Forms.Button()
         Me.cmdFindMax = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
+        Me.cmdFindMin = New System.Windows.Forms.Button()
+        Me.cmdFindOccs = New System.Windows.Forms.Button()
+        Me.cmdLinearSearch = New System.Windows.Forms.Button()
         Me.LstOutput1 = New System.Windows.Forms.ListBox()
         Me.LstOutput2 = New System.Windows.Forms.ListBox()
         Me.LstReport = New System.Windows.Forms.ListBox()
@@ -43,23 +43,23 @@ Partial Class Form1
         Me.cmdFillArray.Text = "Fill Array"
         Me.cmdFillArray.UseVisualStyleBackColor = True
         '
-        'Button2
+        'cmdWriteFile
         '
-        Me.Button2.Location = New System.Drawing.Point(13, 106)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(116, 87)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Write To File"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.cmdWriteFile.Location = New System.Drawing.Point(13, 106)
+        Me.cmdWriteFile.Name = "cmdWriteFile"
+        Me.cmdWriteFile.Size = New System.Drawing.Size(116, 87)
+        Me.cmdWriteFile.TabIndex = 1
+        Me.cmdWriteFile.Text = "Write To File"
+        Me.cmdWriteFile.UseVisualStyleBackColor = True
         '
-        'Button3
+        'cmdReadFile
         '
-        Me.Button3.Location = New System.Drawing.Point(13, 199)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(116, 87)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "Read From File"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.cmdReadFile.Location = New System.Drawing.Point(13, 199)
+        Me.cmdReadFile.Name = "cmdReadFile"
+        Me.cmdReadFile.Size = New System.Drawing.Size(116, 87)
+        Me.cmdReadFile.TabIndex = 2
+        Me.cmdReadFile.Text = "Read From File"
+        Me.cmdReadFile.UseVisualStyleBackColor = True
         '
         'cmdFindMax
         '
@@ -70,32 +70,32 @@ Partial Class Form1
         Me.cmdFindMax.Text = "Find Max"
         Me.cmdFindMax.UseVisualStyleBackColor = True
         '
-        'Button5
+        'cmdFindMin
         '
-        Me.Button5.Location = New System.Drawing.Point(135, 106)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(116, 87)
-        Me.Button5.TabIndex = 4
-        Me.Button5.Text = "Find Min"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.cmdFindMin.Location = New System.Drawing.Point(135, 106)
+        Me.cmdFindMin.Name = "cmdFindMin"
+        Me.cmdFindMin.Size = New System.Drawing.Size(116, 87)
+        Me.cmdFindMin.TabIndex = 4
+        Me.cmdFindMin.Text = "Find Min"
+        Me.cmdFindMin.UseVisualStyleBackColor = True
         '
-        'Button6
+        'cmdFindOccs
         '
-        Me.Button6.Location = New System.Drawing.Point(135, 199)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(116, 87)
-        Me.Button6.TabIndex = 5
-        Me.Button6.Text = "Count Occs"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.cmdFindOccs.Location = New System.Drawing.Point(135, 199)
+        Me.cmdFindOccs.Name = "cmdFindOccs"
+        Me.cmdFindOccs.Size = New System.Drawing.Size(116, 87)
+        Me.cmdFindOccs.TabIndex = 5
+        Me.cmdFindOccs.Text = "Count Occs"
+        Me.cmdFindOccs.UseVisualStyleBackColor = True
         '
-        'Button7
+        'cmdLinearSearch
         '
-        Me.Button7.Location = New System.Drawing.Point(135, 292)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(116, 87)
-        Me.Button7.TabIndex = 6
-        Me.Button7.Text = "Linear Search"
-        Me.Button7.UseVisualStyleBackColor = True
+        Me.cmdLinearSearch.Location = New System.Drawing.Point(13, 292)
+        Me.cmdLinearSearch.Name = "cmdLinearSearch"
+        Me.cmdLinearSearch.Size = New System.Drawing.Size(238, 44)
+        Me.cmdLinearSearch.TabIndex = 6
+        Me.cmdLinearSearch.Text = "Linear Search"
+        Me.cmdLinearSearch.UseVisualStyleBackColor = True
         '
         'LstOutput1
         '
@@ -103,7 +103,7 @@ Partial Class Form1
         Me.LstOutput1.ItemHeight = 15
         Me.LstOutput1.Location = New System.Drawing.Point(258, 13)
         Me.LstOutput1.Name = "LstOutput1"
-        Me.LstOutput1.Size = New System.Drawing.Size(120, 469)
+        Me.LstOutput1.Size = New System.Drawing.Size(120, 409)
         Me.LstOutput1.TabIndex = 7
         '
         'LstOutput2
@@ -112,32 +112,32 @@ Partial Class Form1
         Me.LstOutput2.ItemHeight = 15
         Me.LstOutput2.Location = New System.Drawing.Point(384, 12)
         Me.LstOutput2.Name = "LstOutput2"
-        Me.LstOutput2.Size = New System.Drawing.Size(120, 469)
+        Me.LstOutput2.Size = New System.Drawing.Size(128, 409)
         Me.LstOutput2.TabIndex = 8
         '
         'LstReport
         '
         Me.LstReport.FormattingEnabled = True
         Me.LstReport.ItemHeight = 15
-        Me.LstReport.Location = New System.Drawing.Point(9, 386)
+        Me.LstReport.Location = New System.Drawing.Point(13, 342)
         Me.LstReport.Name = "LstReport"
-        Me.LstReport.Size = New System.Drawing.Size(242, 94)
+        Me.LstReport.Size = New System.Drawing.Size(238, 79)
         Me.LstReport.TabIndex = 9
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(524, 492)
+        Me.ClientSize = New System.Drawing.Size(524, 436)
         Me.Controls.Add(Me.LstReport)
         Me.Controls.Add(Me.LstOutput2)
         Me.Controls.Add(Me.LstOutput1)
-        Me.Controls.Add(Me.Button7)
-        Me.Controls.Add(Me.Button6)
-        Me.Controls.Add(Me.Button5)
+        Me.Controls.Add(Me.cmdLinearSearch)
+        Me.Controls.Add(Me.cmdFindOccs)
+        Me.Controls.Add(Me.cmdFindMin)
         Me.Controls.Add(Me.cmdFindMax)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.cmdReadFile)
+        Me.Controls.Add(Me.cmdWriteFile)
         Me.Controls.Add(Me.cmdFillArray)
         Me.Name = "Form1"
         Me.Text = "Form1"
@@ -146,12 +146,12 @@ Partial Class Form1
     End Sub
 
     Friend WithEvents cmdFillArray As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents cmdWriteFile As Button
+    Friend WithEvents cmdReadFile As Button
     Friend WithEvents cmdFindMax As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button6 As Button
-    Friend WithEvents Button7 As Button
+    Friend WithEvents cmdFindMin As Button
+    Friend WithEvents cmdFindOccs As Button
+    Friend WithEvents cmdLinearSearch As Button
     Friend WithEvents LstOutput1 As ListBox
     Friend WithEvents LstOutput2 As ListBox
     Friend WithEvents LstReport As ListBox
